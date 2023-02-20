@@ -1,0 +1,211 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+:root {
+  --Lightred: hsl(0, 100%, 67%);
+  --PaleLightred: hsla(0, 99%, 67%, 0.041);
+  --Orangeyyellow: hsl(39, 100%, 56%);
+  --PaleOrangeyyellow: hsla(39, 100%, 56%, 0.041);
+  --Greenteal: hsl(166, 100%, 37%);
+  --PaleGreenteal: hsla(166, 100%, 37%, 0.041);
+  --Cobaltblue: hsl(234, 85%, 45%);
+  --PaleCobaltblue: hsla(234, 85%, 45%, 0.041);
+  --Lightslateblue_background: hsl(252, 100%, 67%);
+  --Lightroyalbluebackground: hsl(241, 81%, 54%);
+  --Violetblue_circle: hsla(256, 72%, 46%, 1);
+  --Persianblue_circle: hsla(241, 72%, 46%, 0);
+  --White: hsl(0, 0%, 100%);
+  --Paleblue: hsl(221, 100%, 96%);
+  --Lightlavender: hsl(241, 100%, 89%);
+  --Darkgrayblue: hsl(224, 30%, 27%);
+  --PaleDarkgrayblue: hsla(224, 30%, 27%, 0.616);
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.result-tab {
+  width: 100%;
+  background-image: linear-gradient(
+    var(--Lightslateblue_background),
+    var(--Lightroyalbluebackground)
+  );
+  padding: 20px 0 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+}
+.heading {
+  color: var(--Lightlavender);
+  font-size: 15px;
+}
+.total-score {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+    var(--Violetblue_circle),
+    var(--Persianblue_circle)
+  );
+}
+.total-score h1 {
+  font-size: 2.7em;
+  color: white;
+}
+.total-score p {
+  color: var(--Lightlavender);
+  font-size: 13px;
+}
+.result-tab h3 {
+  color: var(--White);
+  font-weight: 500;
+}
+.result-txt {
+  color: var(--Lightlavender);
+  font-size: 13px;
+  max-width: 250px;
+  padding-top: 5px;
+}
+.summary-tab {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+}
+.sum-heading {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  color: var(--Darkgrayblue);
+  font-weight: 800;
+}
+.rating-tabs {
+  width: 100%;
+  padding: 15px 0;
+}
+.sub-tab {
+  display: flex;
+
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.reaction {
+  background-color: var(--PaleLightred);
+}
+.memory {
+  background-color: var(--PaleOrangeyyellow);
+}
+.verbal {
+  background-color: var(--PaleGreenteal);
+}
+.visual {
+  background-color: var(--PaleCobaltblue);
+}
+.reaction p {
+  color: var(--Lightred);
+}
+.memory p {
+  color: var(--Orangeyyellow);
+}
+.verbal p {
+  color: var(--Greenteal);
+}
+.visual p {
+  color: var(--Cobaltblue);
+}
+.sub-tab p {
+  padding-left: 10px;
+  font-weight: 700;
+}
+.score {
+  margin-left: auto;
+  color: var(--Darkgrayblue);
+  font-weight: 800;
+}
+.score span {
+  color: var(--PaleDarkgrayblue);
+}
+button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 30px;
+  font-size: 17px;
+  color: var(--White);
+  background-color: var(--Darkgrayblue);
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+button:hover {
+  background-image: linear-gradient(
+    var(--Lightslateblue_background),
+    var(--Lightroyalbluebackground)
+  );
+}
+@media (min-width: 700px) {
+  body {
+    background-color: var(--White);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  main {
+    flex-direction: row;
+    width: 70%;
+    align-items: flex-start;
+    border-radius: 20px;
+    background-color: var(--White);
+    max-width: 700px;
+    box-shadow: 10px 20px 10px var(--Paleblue);
+  }
+  .result-tab {
+    border-radius: 20px;
+    padding: 0 20px;
+    width: 50%;
+    height: auto;
+    align-self: stretch;
+  }
+  .heading {
+    font-size: 17px;
+  }
+  .total-score {
+    width: 150px;
+    height: 150px;
+    margin: 30px 0;
+  }
+  .total-score h1 {
+    font-size: 3em;
+  }
+  .total-score p {
+    font-size: 15px;
+  }
+  .result-tab h3 {
+    font-size: 1.2em;
+  }
+  .result-txt {
+    font-size: 15px;
+    max-width: 210px;
+  }
+  .summary-tab {
+    width: 50%;
+    padding: 30px 30px;
+  }
+  .sum-heading {
+    font-size: 1.17em;
+  }
+}
